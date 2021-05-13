@@ -97,4 +97,31 @@
     word = "Danas123je456lep78dan9"
     
     console.log(reverseNums(word))
+
+    // task4
+    function abc(n) {
+        let res = []
+        let counter = 'A'
+        let row = -1
+        let counter2 = 1
+        for (let i = 0; i < n*n ; i++) {
+            
+            if(i % n === 0){
+                row++
+                res.push([])
+            }
+            res[row].push(counter)
+            counter = String.fromCharCode(counter.charCodeAt(0) + counter2)
+            counter2++
+            if (counter2 === 2) {
+                counter2 = 1
+                counter = 'A'
+            }
+            
+        }
+
+        return res
+    }
+
+    console.log(abc(5))
 </script>
