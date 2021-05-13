@@ -42,21 +42,6 @@
 
     // task 2
     function getOddNums(arr) {
-
-        let max = 0
-        let res
-        for (let index in mat) {
-            let counter = 0
-            for(let elm of mat[index]){
-                if (elm < 10) {
-                    counter++
-                }
-            }
-            if (max < counter) {
-                max = counter
-                res = mat[index]
-            }
-        }
         
         return res        
     }
@@ -99,29 +84,34 @@
     console.log(reverseNums(word))
 
     // task4
-    function abc(n) {
-        let res = []
+    function abc(n){
+    	let res = []
         let counter = 'A'
+        let num = 1
         let row = -1
-        let counter2 = 1
-        for (let i = 0; i < n*n ; i++) {
-            
-            if(i % n === 0){
-                row++
+        for(let i = 0; i < n*n; i++){
+        
+        	if(i % n === 0){
+            	row++
                 res.push([])
             }
+            
             res[row].push(counter)
-            counter = String.fromCharCode(counter.charCodeAt(0) + counter2)
-            counter2++
-            if (counter2 === 2) {
-                counter2 = 1
-                counter = 'A'
+            counter = String.fromCharCode(counter.charCodeAt(0) + num)
+            if(i % 3 === 2){
+            num = 1
+            counter = 'A'
             }
             
+        
         }
-
+        
         return res
+        
+        
     }
-
+    
     console.log(abc(5))
+
+    //task5
 </script>
