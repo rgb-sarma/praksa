@@ -7,7 +7,7 @@
 
         while (temp1 > 0) {
             let number = temp1 % 10
-            if (number % 2 === 0) {
+            if (number > 5) {
                 counter1++
             }
             temp1 /= 10
@@ -15,7 +15,7 @@
 
         while (temp2 > 0) {
             let number = temp2 % 10
-            if (number % 2 === 0) {
+            if (number > 5) {
                 counter2++  
             }
             temp2 /= 10
@@ -28,5 +28,14 @@
         }
     }
 
-    
+    let userInput = [14, 33, 56, 686, 3, 34]
+    let res = []
+
+    for (let i = 0; i < userInput.length - 1; i+=2) {
+        
+        res.push(test(userInput[i], userInput[i+1]))
+        
+    }
+
+    console.log(res)
 </script>
